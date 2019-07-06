@@ -1,0 +1,42 @@
+{
+	"name": "tarojs",
+	"description": "tarojs模板自动生成",
+	"version": "1.0.0",
+	"publisher": "",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"microprogram",
+		"小程序",
+		"taro"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "javascript",
+				"extensions": [
+					".js"
+				]
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/index.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jiangwenbo737/vscode-plugin-for-taro.git"
+	},
+	"bugs": {
+		"email": "buct_jiang@sina.cn"
+	},
+	"icon": "assets/image/logo.png",
+	"license": "MIT License"
+}
