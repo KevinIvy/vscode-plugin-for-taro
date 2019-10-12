@@ -2,12 +2,16 @@
     "tarc": {
         "prefix": "tarc",
         "body": [
-            "import Taro, { Component } from '@tarojs/taro'",
-            "import { View, Text } from '@tarojs/components'",
+            "import Taro from '@tarojs/taro'",
+            "import { View } from '@tarojs/components'",
             "",
-            "class Test extends Component {",
+            "class ${1:Test} extends Component {",
             "  constructor(props) {",
             "    super(props)",
+            "  }",
+            "",
+            "  static options = {",
+            "    addGlobalClass: true",
             "  }",
             "",
             "  config = {",
@@ -26,25 +30,23 @@
             "",
             "  render() {",
             "    return (",
-            "      <View>",
-            "        <Text> Test </Text>",
-            "      </View>",
+            "      <View> test </View>",
             "    )",
             "  }",
             "}",
             "",
-            "export default Test"
+            "export default ${1:Test}"
         ],
         "description": "taro页面模板"
     },
     "tarcr":{
         "prefix": "tarcr",
         "body": [
-            "import Taro, { Component } from '@tarojs/taro'",
+            "import Taro from '@tarojs/taro'",
             "import { connect } from '@tarojs/redux'",
-            "import { View, Text } from '@tarojs/components'",
+            "import { View } from '@tarojs/components'",
             "",
-            "class Test extends Component {",
+            "class ${1:Test} extends Taro.Component {",
             "  constructor(props) {",
             "    super(props)",
             "  }",
@@ -65,18 +67,16 @@
             "",
             "  render() {",
             "    return (",
-            "      <View>",
-            "        <Text> Test </Text>",
-            "      </View>",
+            "      <View> test </View>",
             "    )",
             "  }",
             "}",
             "",
-            "const mapState = () => ()",
+            "const mapState = () => ({})",
             "",
-            "const mapDispatch = dispatch => ()",
+            "const mapDispatch = () => ({})",
             "",
-            "export default connect(mapState, mapDispatch)(Test)"
+            "export default connect(mapState, mapDispatch)(${1:Test})"
         ],
         "description": "taro页面集成rematch"
     }

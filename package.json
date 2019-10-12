@@ -1,8 +1,8 @@
 {
-	"name": "tarojs",
+	"name": "taro-template",
 	"description": "tarojs模板自动生成",
-	"version": "1.0.0",
-	"publisher": "",
+	"version": "1.1.0",
+	"publisher": "jiangwenbo",
 	"engines": {
 		"vscode": "^1.20.0"
 	},

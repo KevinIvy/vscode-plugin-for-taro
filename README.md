@@ -1,15 +1,19 @@
 ## tarc
 
 ```javascript
-  import Taro, { Component } from '@tarojs/taro'
-  import { View, Text } from '@tarojs/components'
+  import Taro from '@tarojs/taro'
+  import { View } from '@tarojs/components'
   
-  class Test extends Component {
+  class Test extends Taro.Component {
     constructor(props) {
       super(props)
     }
 
-    config = {,
+    static options = {
+      addGlobalClass: true
+    }
+
+    config = {
       navigationBarTitleText: ''
     }
 
@@ -25,9 +29,7 @@
 
     render() {
       return (
-        <View>
-          <Text> Test </Text>
-        </View>
+        <View> test </View>
       )
     }
   }
@@ -37,16 +39,16 @@
 
 ## tarcr
 ```javascript
-  import Taro, { Component } from '@tarojs/taro'
+  import Taro from '@tarojs/taro'
   import { connect } from '@tarojs/redux'
-  import { View, Text } from '@tarojs/components'
+  import { View } from '@tarojs/components'
 
-  class Test extends Component {
+  class Test extends Taro.Component {
     constructor(props) {
       super(props)
     }
 
-    config = {,
+    config = {
       navigationBarTitleText: ''
     }
 
@@ -62,16 +64,14 @@
 
     render() {
       return (
-        <View>
-          <Text> Test </Text>
-        </View>
+        <View> test </View>
       )
     }
   }
 
-  const mapState = () => ()
+  const mapState = () => ({})
 
-  const mapDispatch = dispatch => ()
+  const mapDispatch = () => ({})
 
   export default connect(mapState, mapDispatch)(Test)
 ```
